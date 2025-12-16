@@ -10,7 +10,7 @@ FROM maven:3.8.3-eclipse-temurin-17 as builder
 WORKDIR /app
 
 # Copy source code from local to container
-COPY . /appFROM openjdk:17-jdk-alpine as deployer
+COPY . /app
 
 # Build application and skip test cases
 RUN mvn clean install -DskipTests=true
